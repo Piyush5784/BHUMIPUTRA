@@ -2180,3 +2180,24 @@ h6 {
 .contact__v2 .icon i {
   color: #a67c52;
 }
+
+.faq-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.accordion-button::after {
+  transform: rotate(180deg);
+}
+.accordion-button.collapsed::after {
+  transform: rotate(0deg);
+}
+
+/* Light brown for open accordion */
+.accordion-button:not(.collapsed) {
+  background-color: #f5e5d1 !important;
+  color: #7a4c15 !important;
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(180, 93, 0, 0.15);
+}
