@@ -1,24 +1,51 @@
 :root {
-  --primary-brown: #8b4513;
-  --secondary-brown: #a0522d;
-  --brown-dark: #5c2e0d;
-  --brown-medium: #a9744f;
-  --brown-light: #d2b48c;
-  --brown-very-light: #f5e9da;
-  --brown-muted: #bfa07a;
-  --brown-accent: #7c3f10;
-  --golden: #d4af37;
-  --golden-dark: #b8860b;
-  --golden-light: #f4e99b;
-  --text-light: #f5f5f5;
+  /* Primary orange-brown from the image background */
+  --primary-brown: #b8411f;
+  --secondary-brown: #d4561f;
+  --brown-dark: #8b2f0f;
+  --brown-dark-secondary: #982b00;
+
+  --brown-medium: #c14a20;
+  --brown-light: #e8947a;
+  --brown-very-light: #f9e6e0;
+  --brown-muted: #d67a5a;
+  --brown-accent: #a03318;
+
+  /* Golden accents for text and highlights */
+  --golden: #f4d03f;
+  --golden-dark: #e6b800;
+  --golden-light: #f7e87d;
+
+  /* Text colors */
+  --text-light: #faf5f0;
   --text-dark: #2c1810;
+  --text-golden: #ffde65;
+
+  /* Button styling to match the blue buttons in the image */
+  --button-blue-bg: #1e3a8a;
+  --button-blue-text: #ffffff;
+  --button-blue-hover-bg: #1e40af;
+  --button-blue-hover-text: #f4d03f;
+
+  /* Alternative brown buttons */
   --button-brown-bg: var(--brown-medium);
   --button-brown-text: var(--text-light);
   --button-brown-hover-bg: var(--brown-dark);
   --button-brown-hover-text: var(--golden-light);
-  --background-brown: var(--brown-very-light);
-}
 
+  /* Background colors */
+  --background-brown: var(--primary-brown);
+  --background-light: var(--brown-very-light);
+
+  /* Service card backgrounds (lighter brown tones) */
+  --card-bg: rgba(139, 47, 15, 0.8);
+  --card-border: rgba(244, 208, 63, 0.3);
+
+  /* Form input styling */
+  --input-bg: var(--brown-very-light);
+  --input-border: var(--brown-medium);
+  --input-focus: var(--golden);
+}
 * {
   margin: 0;
   padding: 0;
@@ -44,9 +71,7 @@ h6 {
 /* Navigation Styles */
 .navbar {
   background: linear-gradient(
-    135deg,
-    var(--primary-brown),
-    var(--secondary-brown)
+    /* 135deg, var(--primary-brown), */ var(--brown-dark)
   );
   padding: 1rem 0;
   transition: all 0.3s ease;
@@ -66,7 +91,7 @@ h6 {
 }
 
 .brand-text {
-  color: var(--golden) !important;
+  color: var(--text-golden) !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -104,9 +129,8 @@ h6 {
 .hero-section,
 .about-hero-section {
   background: linear-gradient(
-    135deg,
-    var(--primary-brown),
-    var(--secondary-brown)
+    /* 135deg, */ var(--brown-dark),
+    var(--brown-dark)
   );
   color: var(--text-light);
   padding-top: 80px;
@@ -152,21 +176,36 @@ h6 {
 
 /* Button Styles */
 .btn-golden {
-  background: var(--brown-dark);
+  background: var(--text-golden) !important ;
   border: none;
-  color: var(--text-dark);
+  color: var(--text-dark) !important;
   font-weight: 600;
   padding: 12px 30px;
   border-radius: 50px;
   transition: all 0.3s ease;
-  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+.btn-golden-2 {
+  background: var(--text-golden) !important ;
+  border: none;
+  border-radius: 10px;
+  color: var(--text-dark) !important;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
+.btn-golden-2:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  background-color: var(--brown-dark);
+}
 .btn-golden:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-  color: var(--text-light);
+  color: var(--text-golden) !important;
   background-color: var(--brown-dark);
 }
 
@@ -246,8 +285,8 @@ h6 {
 .mission-vision-section {
   background: linear-gradient(
     135deg,
-    var(--primary-brown),
-    var(--secondary-brown)
+    var(--brown-dark),
+    var(--brown-dark-secondary)
   );
   color: var(--text-light);
 }
@@ -262,6 +301,9 @@ h6 {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+}
+.mission-h3 {
+  color: var(--text-golden) !important;
 }
 
 .mission-card:hover,
@@ -328,9 +370,7 @@ h6 {
 /* Impact Section */
 .impact-section {
   background: linear-gradient(
-    135deg,
-    var(--secondary-brown),
-    var(--primary-brown)
+    /* 135deg, */ /* var(--secondary-brown), */ var(--brown-dark)
   );
   color: var(--text-light);
   padding: 100px 0;
@@ -413,18 +453,20 @@ h6 {
 
 /* CTA Section */
 .cta-section {
-  background: var(--brown-light);
+  background: var(--brown-dark-secondary);
   color: var(--text-dark);
   padding: 100px 0;
 }
 
 .cta-title {
   font-size: 2.5rem;
+  color: var(--text-golden);
   margin-bottom: 1rem;
 }
 
 .cta-subtitle {
   font-size: 1.2rem;
+  color: white;
   margin-bottom: 2rem;
   opacity: 0.8;
 }
@@ -432,9 +474,7 @@ h6 {
 /* Contact Section */
 .contact-section {
   background: linear-gradient(
-    135deg,
-    var(--primary-brown),
-    var(--secondary-brown)
+    /* 135deg, */ /* var(--primary-brown), */ var(--brown-dark)
   );
   color: var(--text-light);
   padding: 100px 0;
@@ -525,7 +565,7 @@ h5 {
 
 /* Footer */
 .footer {
-  background: var(--text-dark);
+  background: var(--brown-dark-secondary) !important;
   color: var(--text-light);
 }
 
