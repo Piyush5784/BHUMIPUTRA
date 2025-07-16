@@ -98,6 +98,7 @@ h6 {
 .nav-link {
   color: var(--text-light) !important;
   font-weight: 500;
+  text-align: center;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -138,7 +139,8 @@ h6 {
 
 .hero-title,
 .about-hero-title {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
+  letter-spacing: 5px;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -150,7 +152,8 @@ h6 {
 
 .hero-subtitle,
 .about-hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
+  font-weight: 200;
   margin-bottom: 2rem;
   opacity: 0.9;
 }
@@ -194,6 +197,31 @@ h6 {
   padding: 12px 30px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+.btn-login {
+  background: var(--text-golden) !important ;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  border-radius: 0.4rem;
+
+  color: var(--text-dark) !important;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-login:hover {
+  color: var(--text-dark) !important;
 }
 
 .btn-golden-2:hover {
@@ -592,6 +620,10 @@ h5 {
   .about-hero-title {
     font-size: 2.5rem;
   }
+  .hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+  }
 
   .section-title {
     font-size: 2rem;
@@ -621,6 +653,11 @@ h5 {
   .hero-title,
   .about-hero-title {
     font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
   }
 
   .service-card,
@@ -1752,6 +1789,11 @@ h6 {
   bottom: -40px;
   left: -60px;
 }
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--button-blue-hover-bg) !important;
+}
 @media (max-width: 991.98px) {
   .hero__v6 .hero-img .img-card {
     left: 10px;
@@ -2209,15 +2251,7 @@ h6 {
   border-color: #a67c52;
   box-shadow: 0 0 0 0.2rem rgba(166, 124, 82, 0.25);
 }
-.contact__v2 .btn-primary {
-  background-color: #a67c52;
-  border-color: #a67c52;
-}
-.contact__v2 .btn-primary:hover {
-  background-color: #5d3a00;
-  border-color: #5d3a00;
-}
-.contact__v2 .icon i {
+.contact__v2 .contact__v2 .contact__v2 .icon i {
   color: #a67c52;
 }
 
@@ -2240,4 +2274,32 @@ h6 {
 }
 .accordion-button:focus {
   box-shadow: 0 0 0 0.25rem rgba(180, 93, 0, 0.15);
+}
+
+.hero-image {
+  position: relative;
+  background-image: url("/images/slider/img1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vh;
+  }
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
 }
